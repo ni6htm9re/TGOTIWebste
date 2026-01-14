@@ -12,19 +12,23 @@
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
       font-family: sans-serif;
+      background: #fff;
+      color: #222;
     }
 
-    /* ===== Top Bar ===== */
+    /* ===== Header ===== */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 32px;
+      padding: 16px 32px;
+      border-bottom: 1px solid #ddd;
     }
 
     .name {
@@ -33,13 +37,14 @@
     }
 
     .socials a {
-      margin-left: 16px;
+      margin-left: 12px;
       text-decoration: none;
       font-weight: 600;
       border: 2px solid black;
       padding: 6px 12px;
       border-radius: 6px;
       color: black;
+      transition: all 0.2s;
     }
 
     .socials a:hover {
@@ -50,10 +55,10 @@
     /* ===== Main Section ===== */
     main {
       display: flex;
-      align-items: center;
+      align-items: flex-start; /* keep content at top */
       justify-content: space-between;
-      padding: 0px 1px;
-      gap: 1px;
+      padding: 24px 32px;
+      gap: 24px;
     }
 
     .left {
@@ -67,19 +72,22 @@
     }
 
     .left p {
-      font-size: 1.1rem;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      line-height: 1.4;
     }
 
     /* ===== Image Placeholder ===== */
     .right {
-      width: 300px;
-      height: 300px;
+      width: 250px;
+      height: 250px;
       border: 2px dashed #aaa;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #777;
       font-size: 0.9rem;
+      border-radius: 8px;
     }
 
     /* ===== Mobile ===== */
@@ -87,15 +95,17 @@
       main {
         flex-direction: column;
         text-align: center;
+        align-items: center;
       }
 
       .left {
         max-width: 100%;
+        margin-bottom: 24px;
       }
 
       .right {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
       }
     }
   </style>
